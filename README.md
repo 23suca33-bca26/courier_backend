@@ -279,7 +279,8 @@ Custom Domain:
   * Docker container
   * Frontend integration
 
-📸 Demo recording shown during evaluation.
+🎬 **Demo Video:**
+[Watch Project Demo](https://drive.google.com/file/d/1pZXtoj6_CTyNvB9nz8Y2Q6aP2SSHIIw5/view?usp=sharing)
 
 ---
 
