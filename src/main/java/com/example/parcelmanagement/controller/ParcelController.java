@@ -15,7 +15,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/parcels")
-@CrossOrigin(origins = "https://couriertracking.vercel.app/") // Enable CORS for Vercel frontend
+@CrossOrigin(origins = "https://thankful-water-02add4900.4.azurestaticapps.net") // Enable CORS for Azure frontend
 public class ParcelController {
 
        private final ParcelService parcelService;
