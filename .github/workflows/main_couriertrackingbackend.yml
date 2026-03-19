@@ -16,10 +16,10 @@ jobs:
       contents: read #This is required for actions/checkout
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Set up Java version
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@3a44f14d9f64a0f404152f29bc0b6de33d01d725 # v4.7.0
         with:
           java-version: '17'
           distribution: 'microsoft'
@@ -28,7 +28,7 @@ jobs:
         run: mvn clean install
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
@@ -42,12 +42,12 @@ jobs:
   
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@cc2067a03f40b4694463435c25e8aca75d697810 # v4.1.9
         with:
           name: java-app
       
       - name: Login to Azure
-        uses: azure/login@v2
+        uses: azure/login@a74d20032906806536b9075775837ca7728ce703 # v2.1.1
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_770C32AB9BD8421EA339B67F13AE2A32 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5663148520974006AE360EE3D90EBB56 }}
@@ -55,7 +55,7 @@ jobs:
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@034f8a32d674116c47864112e847c21cdb5e8080 # v3.0.1
         with:
           app-name: 'couriertrackingbackend'
           slot-name: 'Production'
