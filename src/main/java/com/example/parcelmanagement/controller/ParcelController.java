@@ -18,7 +18,7 @@ import java.util.List;
 @CrossOrigin(origins = "https://thankful-water-02add4900.4.azurestaticapps.net") // Enable CORS for Azure frontend
 public class ParcelController {
 
-       private final ParcelService parcelService;
+        private final ParcelService parcelService;
 
     // Constructor injection for service
     public ParcelController(ParcelService parcelService) {
